@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import { ChildArea } from "./ChildArea";
 
-function App() {
+export default function App() {
+  const [text, setText] = useState(0);
+  const onClickCountUp = () => {
+    setCount(count + 1);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <br />
+      <input />
+      <br />
+      <br />
+      <button>表示</button>
+      <ChildArea></ChildArea>
     </div>
   );
 }
-
-export default App;
